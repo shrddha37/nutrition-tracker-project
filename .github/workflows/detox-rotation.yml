@@ -1,0 +1,33 @@
+name: Morning Detox Rotation
+
+on:
+  schedule:
+    - cron: '30 0 * * *'   # 06:00 IST
+    - cron: '0 1 * * *'    # 06:30 IST
+  workflow_dispatch:
+
+jobs:
+  send-mail:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Decide SLOT from cron time
+        run: |
+          NOW=$(date -u +%H:%M)
+          if [ "$NOW" = "00:30" ]; then echo "SLOT=1" >> $GITHUB_ENV; fi
+          if [ "$NOW" = "01:00" ]; then echo "SLOT=2" >> $GITHUB_ENV; fi
+          if [ -z "$SLOT" ]; then echo "SLOT=1" >> $GITHUB_ENV; fi
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Send detox mail
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          TO_EMAIL:  ${{ secrets.TO_EMAIL }}
+          SLOT:      ${{ env.SLOT }}
+        run: python alerts/detox_rotation.py
