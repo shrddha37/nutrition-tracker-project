@@ -1,31 +1,80 @@
-# nutrition-tracker-project
-Mini PySpark + Power BI Project with water reminder alerts
+📊 Nutrition Data Engineering Pipeline (End-to-End)
 
-# 🥦 Nutrition Tracker Project
+An end-to-end Data Engineering mini-project designed to track daily nutrition and hydration data, process it using scalable ETL principles, and generate actionable insights through dashboards and rule-based intelligence.
 
-An end-to-end **data engineering + AI mini project** to track daily nutrition intake, visualize patterns, and generate automated health reminders.  
-This project is built using **PySpark** (ETL), **Power BI** (Visualization), and **Python** (AI-style alerts) — completely on free & open tools ⚡
+This project demonstrates real-world data engineering concepts using PySpark, Power BI, and Python — built entirely using open-source and free tools.
 
----
+🎯 Project Objectives
 
-## 🧭 Project Goals
+Track daily calorie intake, hydration, and nutrition metrics
 
-- 📅 Track daily **calories**, **fruits**, **dry fruits**, **protein**, **mood**, and **hydration**.
-- ⚙️ Build an **ETL pipeline using PySpark** to clean and aggregate raw nutrition data.
-- 📊 Visualize nutrition and hydration insights using **Power BI dashboards**.
-- 🤖 Enable **AI-style analysis** using Python queries.
-- 💧 Create **automated water reminder alerts** (email notification if daily intake < 2L).
-- 📈 Plan for **weekly/monthly summary reports** and integration with **wearable fitness apps**.
+Design a Bronze → Silver → Gold data pipeline using PySpark
 
----
+Perform data cleaning, transformations, and aggregations
 
-## 📂 Tech Stack
+Build Power BI dashboards to visualize trends and adherence
 
-| Tool                          | Purpose                                     |
-|-------------------------------|---------------------------------------------|
-| 🐍 Google Colab (PySpark)     | ETL pipeline, data cleaning & aggregation   |
-| 📊 Power BI Desktop           | Data visualization & dashboard creation    |
-| 🐙 GitHub                     | Project versioning & portfolio             |
-| ✉️ Python SMTP (Gmail)       | Automated alerting system                  |
-| ⏰ GitHub Actions (optional) | Future automation for reports              |
+Implement rule-based AI alerts for nutrition and hydration monitoring
 
+Simulate automated health insights similar to production systems
+
+🏗️ Architecture Overview
+
+Bronze Layer
+
+Raw daily nutrition & water intake data (CSV / JSON)
+
+Silver Layer
+
+Cleaned, standardized, and validated datasets
+
+Null handling, type casting, derived columns
+
+Gold Layer
+
+Aggregated daily metrics
+
+Analytics-ready tables for visualization and alerts
+
+📈 Visualization (Power BI)
+
+Daily calorie consumption trends
+
+Target vs actual calorie comparison
+
+Daily water intake trend with goal reference lines
+
+Insight-focused visuals optimized for storytelling
+
+Dashboards focus on trend analysis and adherence, not cosmetic visuals.
+
+🤖 AI / Intelligence Layer (Rule-Based)
+
+A lightweight rule-based intelligence module implemented in Python:
+
+Hydration alert if water intake < 2L
+
+Calorie surplus alert if intake exceeds target
+
+Low-energy alert if calories are significantly below target
+
+Positive reinforcement when metrics are within range
+
+This simulates how business rules or ML-driven alerts can be integrated into data pipelines.
+
+🛠️ Tech Stack
+Tool	Purpose
+PySpark (JupyterLab)	ETL, data transformations
+Power BI Desktop	Data visualization
+Python	Rule-based alert logic
+Docker	Local reproducible environment
+GitHub	Version control & portfolio
+🚀 Future Enhancements
+
+Replace rule-based alerts with ML models
+
+Automate alerts via email or notifications
+
+Schedule pipelines using orchestration tools
+
+Extend to weekly/monthly summary analytics
