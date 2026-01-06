@@ -62,12 +62,15 @@ Positive reinforcement when metrics are within range
 
 This simulates how business rules or ML-driven alerts can be integrated into data pipelines.
 
+**Azure Logic App** to trigger automated email reminders via HTTP events
+
 ## 🛠️ Tech Stack
 | Tool | Purpose |
 |------|---------|
 | **PySpark (JupyterLab)** | ETL processing and data transformations |
 | **Power BI Desktop** | Data visualization and analytical dashboards |
 | **Python** | Rule-based intelligence and alert logic |
+| **Azure Logic Apps** | Event-driven automation for email-based detox water reminders |
 | **Docker** | Local reproducible development environment |
 | **GitHub** | Version control and project portfolio |
 
