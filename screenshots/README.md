@@ -1,11 +1,11 @@
 **Screenshots for dashboards and automation flows**
 
-## Automated Water Reminder (Azure Logic App)
+## Automated Water Reminder (Azure Logic App)(Screenshot 2025-11-12 164309.png,Screenshot 2025-11-12 170347.png)
 
 **Event-driven workflow** that triggers email alerts when daily water intake falls below the defined threshold, demonstrating alert-based automation.
 
 
-## Power BI Dashboard 
+## Power BI Dashboard (Screenshot 2026-01-07 125720.png ,Screenshot 2026-01-07 130859.png)
 1️⃣ Daily Calories vs Target Trend
 
 Caption:
